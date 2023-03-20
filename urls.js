@@ -61,7 +61,7 @@ async function readUrlsAndOutputHtmlToFile(arr, writeFile) {
 
 async function catFileAndMakeArrayForEachLine(readFileName) {
     try {
-        const fileData = await fs.readFileSync(readFileName, 'utf8');
+        const fileData = fs.readFileSync(readFileName, 'utf8');
         const urls = fileData.split('\n');   
         return urls;
     } catch(e) {
